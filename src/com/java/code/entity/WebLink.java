@@ -1,6 +1,8 @@
 package com.java.code.entity;
 
-public class WebLink extends Bookmark {
+import com.java.code.partner.Shareable;
+
+public class WebLink extends Bookmark implements Shareable {
     private String url;
     private String host;
 
@@ -22,8 +24,7 @@ public class WebLink extends Bookmark {
 
     @Override
     public boolean isKidFriendly() {
-        if(this.url.toLowerCase().contains("porn") || this.getTitle().toLowerCase().contains("Porn") ||this.host.toLowerCase().contains("adult") ) return false;
-        return true;
+        return !this.url.toLowerCase().contains("porn") && !this.getTitle().toLowerCase().contains("porn") && !this.host.toLowerCase().contains("adult");
     }
 
     @Override
@@ -32,5 +33,16 @@ public class WebLink extends Bookmark {
                 "url='" + url + '\'' +
                 ", host='" + host + '\'' +
                 '}';
+    }
+
+    @Override
+    public String getData() {
+
+        return "<item>" +
+                "<type>WebLink</type>" +
+                "<title>" + getTitle() + "</title>" +
+                "<url>" + url + "</url>" +
+                "<host>" + host + "</host>" +
+                "</item>";
     }
 }

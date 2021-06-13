@@ -1,15 +1,45 @@
 package com.java.code.entity;
 
 
+import com.java.code.constants.KidFriendlyStatus;
+
 public abstract class Bookmark {
     private long id;
     private String title;
     private String profileUrl;
+    private String kidFriendlyStatus = KidFriendlyStatus.UNKNOWN;
+    private User kidFriendlyMarkedBy;
+    private User sharedBy;
+
+    public User getSharedBy() {
+        return sharedBy;
+    }
+
+    public void setSharedBy(User sharedBy) {
+        this.sharedBy = sharedBy;
+    }
+
+
+    public User getKidFriendlyMarkedBy() {
+        return kidFriendlyMarkedBy;
+    }
+
+    public void setKidFriendlyMarkedBy(User kidFriendlyMarkedBy) {
+        this.kidFriendlyMarkedBy = kidFriendlyMarkedBy;
+    }
+
+    public String getKidFriendlyStatus() {
+        return kidFriendlyStatus;
+    }
+
+    public void setKidFriendlyStatus(String kidFriendlyStatus) {
+        this.kidFriendlyStatus = kidFriendlyStatus;
+    }
+
 
     public long getId() {
         return id;
     }
-
 
 
     public void setId(long id) {

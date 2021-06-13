@@ -1,8 +1,11 @@
 package com.java.code.entity;
 
+import com.java.code.partner.Shareable;
+import org.junit.platform.commons.util.StringUtils;
+
 import java.util.Arrays;
 
-public class Book extends Bookmark {
+public class Book extends Bookmark implements Shareable {
     private int publicationYear;
     private String publisher;
     private String[] authors;
@@ -54,8 +57,7 @@ public class Book extends Bookmark {
         if(this.getTitle().toLowerCase().contains("porn")) return false;
         if(publisher.toLowerCase().contains("porn")) return false;
         if(genre.toLowerCase().contains("philosophy")) return false;
-        if(genre.toLowerCase().contains("self help")) return false;
-        return true;
+        return !genre.toLowerCase().contains("self help");
     }
 
     @Override
@@ -67,5 +69,20 @@ public class Book extends Bookmark {
                 ", genre='" + genre + '\'' +
                 ", amazonRating=" + amazonRating +
                 '}';
+    }
+
+    @Override
+    public String getData() {
+        return "<item>" +
+                "<type>Book</type>" +
+                "<title>" + getTitle() + "</title>" +
+                "<publisher>" + publisher + "</publisher>" +
+                "<publicationYear>" + publicationYear + "</publicationYear>" +
+                "<genre>" + genre + "</genre>" +
+                "<authors>" +
+                Arrays.toString(authors) +
+                "</authors>" +
+                "<amazonRating>" + amazonRating + "</amazonRating>" +
+                "</item>";
     }
 }
