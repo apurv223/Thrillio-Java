@@ -1,9 +1,8 @@
-package com.java.concepts.dao;
+package com.java.code.dao;
 
-import com.java.concepts.DataStore;
-import com.java.concepts.entity.Bookmark;
-import com.java.concepts.entity.User;
-import com.java.concepts.entity.UserBookmark;
+import com.java.code.DataStore;
+import com.java.code.entity.Bookmark;
+import com.java.code.entity.UserBookmark;
 
 public class BookmarkDao {
     public Bookmark[][] getBookmarks(){

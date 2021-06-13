@@ -1,9 +1,9 @@
-package com.java.concepts;
+package com.java.code;
 
-import com.java.concepts.entity.Bookmark;
-import com.java.concepts.entity.User;
-import com.java.concepts.manager.BookmarkManager;
-import com.java.concepts.manager.UserManager;
+import com.java.code.entity.Bookmark;
+import com.java.code.entity.User;
+import com.java.code.manager.BookmarkManager;
+import com.java.code.manager.UserManager;
 
 public class Launch {
 

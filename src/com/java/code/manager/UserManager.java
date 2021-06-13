@@ -1,7 +1,7 @@
-package com.java.concepts.manager;
+package com.java.code.manager;
 
-import com.java.concepts.dao.UserDao;
-import com.java.concepts.entity.User;
+import com.java.code.dao.UserDao;
+import com.java.code.entity.User;
 
 public class UserManager {
     private static UserManager instance = new UserManager();

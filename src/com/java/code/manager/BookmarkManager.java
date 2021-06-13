@@ -1,7 +1,7 @@
-package com.java.concepts.manager;
+package com.java.code.manager;
 
-import com.java.concepts.dao.BookmarkDao;
-import com.java.concepts.entity.*;
+import com.java.code.dao.BookmarkDao;
+import com.java.code.entity.*;
 
 public class BookmarkManager {
 

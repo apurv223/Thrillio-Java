@@ -1,4 +1,4 @@
-package com.java.concepts.entity;
+package com.java.code.entity;
 
 import java.util.Arrays;
 
@@ -47,6 +47,15 @@ public class Book extends Bookmark {
 
     public void setAmazonRating(double amazonRating) {
         this.amazonRating = amazonRating;
+    }
+
+    @Override
+    public boolean isKidFriendly() {
+        if(this.getTitle().toLowerCase().contains("porn")) return false;
+        if(publisher.toLowerCase().contains("porn")) return false;
+        if(genre.toLowerCase().contains("philosophy")) return false;
+        if(genre.toLowerCase().contains("self help")) return false;
+        return true;
     }
 
     @Override

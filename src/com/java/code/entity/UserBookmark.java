@@ -1,4 +1,4 @@
-package com.java.concepts.entity;
+package com.java.code.entity;
 
 public class UserBookmark {
     private User user;

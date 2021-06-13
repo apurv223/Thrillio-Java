@@ -1,4 +1,4 @@
-package com.java.concepts.constants;
+package com.java.code.constants;
 
 public class MovieGenre {
     private MovieGenre() {}

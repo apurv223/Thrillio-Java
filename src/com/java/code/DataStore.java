@@ -1,14 +1,14 @@
-package com.java.concepts;
+package com.java.code;
 
-import com.java.concepts.constants.BookGenre;
-import com.java.concepts.constants.Gender;
-import com.java.concepts.constants.MovieGenre;
-import com.java.concepts.constants.UserType;
-import com.java.concepts.entity.Bookmark;
-import com.java.concepts.entity.User;
-import com.java.concepts.entity.UserBookmark;
-import com.java.concepts.manager.BookmarkManager;
-import com.java.concepts.manager.UserManager;
+import com.java.code.constants.BookGenre;
+import com.java.code.constants.Gender;
+import com.java.code.constants.MovieGenre;
+import com.java.code.constants.UserType;
+import com.java.code.entity.Bookmark;
+import com.java.code.entity.User;
+import com.java.code.entity.UserBookmark;
+import com.java.code.manager.BookmarkManager;
+import com.java.code.manager.UserManager;
 
 public class DataStore {
 	public static final int MAX_BOOKMARKS_PER_USER = 5;

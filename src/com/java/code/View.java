@@ -1,8 +1,8 @@
-package com.java.concepts;
+package com.java.code;
 
-import com.java.concepts.controller.BookmarkController;
-import com.java.concepts.entity.Bookmark;
-import com.java.concepts.entity.User;
+import com.java.code.controller.BookmarkController;
+import com.java.code.entity.Bookmark;
+import com.java.code.entity.User;
 
 public class View {
     public static void bookmark(User user, Bookmark[][] bookmarks){

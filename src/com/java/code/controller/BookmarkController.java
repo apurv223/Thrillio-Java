@@ -1,8 +1,8 @@
-package com.java.concepts.controller;
+package com.java.code.controller;
 
-import com.java.concepts.entity.Bookmark;
-import com.java.concepts.entity.User;
-import com.java.concepts.manager.BookmarkManager;
+import com.java.code.entity.Bookmark;
+import com.java.code.entity.User;
+import com.java.code.manager.BookmarkManager;
 
 public class BookmarkController {
     private static BookmarkController instance = new BookmarkController();

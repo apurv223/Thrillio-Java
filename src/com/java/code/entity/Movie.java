@@ -1,4 +1,6 @@
-package com.java.concepts.entity;
+package com.java.code.entity;
+
+import com.java.code.constants.MovieGenre;
 
 import java.util.Arrays;
 
@@ -48,6 +50,12 @@ public class Movie extends Bookmark {
 
     public void setImdbRating(double imdbRating) {
         this.imdbRating = imdbRating;
+    }
+
+    @Override
+    public boolean isKidFriendly() {
+        if(this.genre.equals(MovieGenre.HORROR) || this.genre.equals(MovieGenre.THRILLERS)) return false;
+        return true;
     }
 
     @Override
