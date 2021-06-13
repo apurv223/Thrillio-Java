@@ -1,10 +1,7 @@
 package com.java.concepts.manager;
 
 import com.java.concepts.dao.BookmarkDao;
-import com.java.concepts.entity.Book;
-import com.java.concepts.entity.Bookmark;
-import com.java.concepts.entity.Movie;
-import com.java.concepts.entity.WebLink;
+import com.java.concepts.entity.*;
 
 public class BookmarkManager {
 
@@ -61,5 +58,13 @@ public class BookmarkManager {
 
     public Bookmark[][] getBookmarks(){
         return bookmarkDao.getBookmarks();
+    }
+
+    public void saveUserBookmark(User user, Bookmark bookmark) {
+        UserBookmark userBookmark = new UserBookmark();
+        userBookmark.setUser(user);
+        userBookmark.setBookmark(bookmark);
+
+        bookmarkDao.saveUserBookmark(userBookmark);
     }
 }
